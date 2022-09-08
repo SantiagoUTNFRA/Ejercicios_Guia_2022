@@ -15,11 +15,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void getNumeros(int numeros[] , int tam);
+void getNumeros(int numeros[], int tam);
 
 int main(void)
 {
-	setbuf (stdout , NULL);
+	setbuf(stdout, NULL);
 
 	int numeros[5];
 	int suma = 0;
@@ -29,16 +29,16 @@ int main(void)
 	//pido numeros y los acumulo en mi vector[5]
 	for (int i = 0; i < 5; i++)
 	{
-		printf ("ingrese un numero: ");
-		scanf ("%d" , &numeros[i]);
+		printf("ingrese un numero: ");
+		scanf("%d", &numeros[i]);
 		suma += numeros[i];
 	}
 
 	//printeo los numeros que tengo en mi vector
-	printf ("sus numeros son: \n");
+	printf("sus numeros son: \n");
 	for (int i = 0; i < 5; i++)
 	{
-		printf ("%d\n" , numeros[i]);
+		printf("%d\n", numeros[i]);
 
 		//solo cuento los positivos
 		if (numeros[i] > 0)
@@ -49,19 +49,19 @@ int main(void)
 
 	promedio = (float) suma / 5;
 
-	printf ("la suma de los numeros es: %d\n" , suma);
-	printf ("el promedio de los numeros es: %.2f\n" , promedio);
-	printf ("la cantidad de positivos son: %d\n" , positivos);
+	printf("la suma de los numeros es: %d\n", suma);
+	printf("el promedio de los numeros es: %.2f\n", promedio);
+	printf("la cantidad de positivos son: %d\n", positivos);
 
 	return EXIT_SUCCESS;
 }
 
-void getNumeros(int numeros[] , int tam)
+void getNumeros(int numeros[], int tam)
 {
 	for (int i = 0; i < tam; i++)
 	{
-		printf ("ingrese un numero: ");
-		scanf ("%d" , &numeros[i]);
+		printf("ingrese un numero: ");
+		scanf("%d", &numeros[i]);
 	}
 }
 

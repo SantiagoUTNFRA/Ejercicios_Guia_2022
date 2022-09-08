@@ -19,12 +19,63 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#define TAM 5
+
+int getNumero(int numeros[], int tam);
+int printNumero(int numeros[], int tam);
+int validateRange(int )
+
+/*
+ * TODO: hacer funciones con vectores de operaciones basicas
+ *
+ * int sumarVector(int numeros[], int tam);
+ * int restarVector(int numeros[], int tam);
+ * int multiplicarVector(int numeros[], int tam);
+ * int dividirVector(int numeros[], int tam);
+ * int factorialVector(int numeros[], int tam);
+ */
 
 int main(void)
 {
-	setbuf (stdout , NULL);
+	setbuf(stdout, NULL);
 
+	int vecNumeros[5];
 
-	puts ("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	getNumero(vecNumeros, TAM);
+	printNumero(vecNumeros, TAM);
+
 	return EXIT_SUCCESS;
 }
+
+int getNumero(int numeros[], int tam)
+{
+	int todoOk = -1;
+	if (numeros != NULL)
+	{
+		for (int i = 0; i < tam; i++)
+		{
+			printf("ingrese un numero: ");
+			scanf("%d", &numeros[i]);
+		}
+		todoOk = 0;
+	}
+	return todoOk;
+}
+
+int printNumero(int numeros[], int tam)
+{
+	int todoOk = -1;
+	if (numeros != NULL)
+	{
+		printf("Contenido completo del vector:");
+
+		for (int i = 0; i < tam; i++)
+		{
+			printf("%d", numeros[i]);
+		}
+
+		todoOk = 0;
+	}
+	return todoOk;
+}
+
